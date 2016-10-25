@@ -1,0 +1,13 @@
+<div class="container" ng-controller="MyWelcomeController">
+	<div class="jumbotron">
+	<h1>Hello!</h1>
+	<p>Enter your name into the Star Wars Universe!</p>
+		<form id='send' ng-submit="setUser()">
+			<div class="input-group" id="tweet-input">
+				<input type="text" class="form-control" ng-model="userName" placeholder="enter name...">
+				<span class="input-group-btn">
+					<input type="submit" class="btn btn-default" value=" enter ">
+				</span>
+			</div>
+		</form>
+</div>

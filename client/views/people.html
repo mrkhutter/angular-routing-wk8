@@ -1,0 +1,12 @@
+<div x-ng-controller="MyListController">
+	<div class="container" x-ng-init="init()">
+
+
+		<ul class="list-group">
+			<li class="list-group-item block" ng-repeat="person in people">
+				<span class="text-uppercase user">{{person.name}}</span>
+			</li>
+		</ul>
+
+	</div>
+</div>
