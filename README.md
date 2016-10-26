@@ -5,7 +5,7 @@
 #### Further Reading
 Angular [docs](https://docs.angularjs.org/api/ng)
 Angular usage [examples](https://github.com/curran/screencasts/tree/gh-pages/introToAngular)
-Star Wars APO [api] (http://swapi.co/)
+Star Wars API [Star Wars API](http://swapi.co/)
 
 
 
