@@ -1,6 +1,6 @@
 var app = angular.module('myStarWarsApp', ['ngRoute']);
 
-var baseUrl = 'http://swapi.co/';
+var baseUrl = 'http://swapi.co/api/';
 
 app.controller('MyWelcomeController', ['$scope', '$rootScope', '$location',
 	function($scope, $rootScope, $location){
@@ -26,7 +26,7 @@ app.controller('MyListController', ['$scope', '$location', '$http', '$rootScope'
 		$scope.getPeople = function(){
 			$http({
 				method: 'GET',
-				url: baseUrl + '/api/people/'
+				url: baseUrl + 'people/'
 			}).then(function(response){
 				$scope.people = response.data.results;
 			}, function(err) {
