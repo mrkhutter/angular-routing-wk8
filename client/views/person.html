@@ -1,0 +1,24 @@
+<div x-ng-controller="PersonController">
+	<div class="container" x-ng-init="init()">
+
+    <div class="jumbotrontext-uppercase user">{{person.name}}</div>
+		<ul class="list-group">
+			<li class="list-group-item block">
+				<span class="text">Height: {{person.height}}</span>
+      </li>
+      <li class="list-group-item block">
+        <span class="text">Mass: {{person.mass}}</span>
+      </li>
+      <li class="list-group-item block">
+        <span class="text">Eye Color: {{person.eye_color}}</span>
+      </li>
+      <li class="list-group-item block">
+        <span class="text">Birth Year: {{person.birth_year}}</span>
+      </li>
+      <li class="list-group-item block">
+        <span class="text">Gender: {{person.gender}}</span>
+			</li>
+		</ul>
+
+	</div>
+</div>
