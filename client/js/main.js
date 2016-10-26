@@ -29,6 +29,9 @@ app.controller('MyListController', ['$scope', '$location', '$http', '$rootScope'
 				url: baseUrl + '/api/people/'
 			}).then(function(response){
 				$scope.people = response.data.results;
+				$scope.people.forEach(function(person){
+					person.url = person.url.replace(baseUrl, '');
+				});
 			}, function(err) {
                 console.error(err);
             });
