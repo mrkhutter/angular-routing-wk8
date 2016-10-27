@@ -2,6 +2,14 @@ var app = angular.module('myStarWarsApp', ['ngRoute']);
 
 var baseUrl = 'http://swapi.co/api/';
 
+app.service('PersonService', ['$http',
+	function($http){
+		this.getPerson = function(personID){
+			return $http.get( baseUrl + 'people/'  + personID );
+		};
+	}
+]);
+
 app.controller('MyWelcomeController', ['$scope', '$rootScope', '$location',
 	function($scope, $rootScope, $location){
 		$scope.setUser = function(){
@@ -39,8 +47,8 @@ app.controller('MyListController', ['$scope', '$location', '$http', '$rootScope'
 
 	}]);
 
-app.controller('PersonController', ['$scope', '$location', '$http', '$rootScope', '$routeParams',
-	function($scope, $location, $http, $rootScope, $routeParams){
+app.controller('PersonController', ['$scope', '$location', '$http', '$rootScope', '$routeParams', 'PersonService',
+	function($scope, $location, $http, $rootScope, $routeParams, PersonService){
 
 		$scope.init = function(){
 			$scope.personID = $routeParams.id;
@@ -52,10 +60,8 @@ app.controller('PersonController', ['$scope', '$location', '$http', '$rootScope'
     }
 
 		$scope.getPerson = function(){
-			$http({
-				method: 'GET',
-				url: baseUrl + 'people/'  + $scope.personID
-			}).then(function(response){
+			PersonService.getPerson($scope.personID)
+			.then(function(response){
 				$scope.person = response.data;
 				console.log($scope.person);
 			}, function(err) {
@@ -65,6 +71,7 @@ app.controller('PersonController', ['$scope', '$location', '$http', '$rootScope'
 
 	}
 ]);
+
 
 app.config(['$routeProvider',
 	function($routeProvider){
