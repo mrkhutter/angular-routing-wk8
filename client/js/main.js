@@ -12,6 +12,14 @@ app.factory('PersonService', ['$http', '$resource',
 	}
 ]);
 
+app.service('PersonService', ['$http', '$resource',
+	function($http, $resource){
+		this.getPerson = function(){
+			$http.get(baseUrl + 'people/:pid', {pid: '@pid'});
+		}
+	}
+]);
+
 app.controller('MyWelcomeController', ['$scope', '$rootScope', '$location',
 	function($scope, $rootScope, $location){
 		$scope.setUser = function(){
@@ -31,6 +39,8 @@ app.controller('PersonController', ['$scope', '$routeParams', '$http', 'PersonSe
 		}
 
 		$scope.getPerson = function(){
+			PersonService.getPerson(personId)
+			.then
 			PersonService.get({pid: personId}, function(data){
 				$scope.person = data;
 			})
