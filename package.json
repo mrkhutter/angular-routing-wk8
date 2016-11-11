@@ -11,5 +11,8 @@
   "dependencies": {
       "express": "latest",
       "body-parser": "latest"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
