@@ -10,7 +10,8 @@
   "license": "MIT",
   "dependencies": {
       "express": "latest",
-      "body-parser": "latest"
+      "body-parser": "latest",
+      "mocha": "latest"
   },
   "scripts": {
     "test": "mocha"
