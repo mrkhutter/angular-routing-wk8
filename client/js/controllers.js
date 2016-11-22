@@ -2,6 +2,7 @@
 var baseUrl = 'http://swapi.co/api/';
 
 
+// make arbitary change
 app.controller('HomeController', ['$scope', '$rootScope', '$location',
 	function($scope, $rootScope, $location){
 		$scope.setUser = function(){
