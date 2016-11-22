@@ -7,7 +7,7 @@ app.config(['$routeProvider',
 		$routeProvider
 			.when('/welcome', {
 				templateUrl: 'views/welcome.html',
-				controller: 'MyWelcomeController'
+				controller: 'HomeController'
 			})
 			.when('/people', {
 				templateUrl: 'views/people.html',
