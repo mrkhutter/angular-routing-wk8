@@ -1,8 +1,7 @@
 var app = angular.module('myStarWarsApp', ['ngRoute']);
 
 
-
-
+// this is our router config for url routing
 app.config(['$routeProvider',
 	function($routeProvider){
 		$routeProvider
