@@ -1,7 +1,8 @@
+// the ever awesome star wars api base
 var baseUrl = 'http://swapi.co/api/';
 
 
-app.controller('LandingPageController', ['$scope', '$rootScope', '$location',
+app.controller('HomeController', ['$scope', '$rootScope', '$location',
 	function($scope, $rootScope, $location){
 		$scope.setUser = function(){
 			$rootScope.currentUserName = $scope.userName;
