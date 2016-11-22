@@ -1,3 +1,4 @@
+// the ever awesome star wars api base
 var baseUrl = 'http://swapi.co/api/';
 
 
