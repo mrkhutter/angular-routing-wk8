@@ -34,4 +34,4 @@ app.controller('MyListController', ['$scope', '$location', '$http', '$rootScope'
             });
 		};
 
-	}]);    
+	}]);
