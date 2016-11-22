@@ -2,7 +2,7 @@
 var baseUrl = 'http://swapi.co/api/';
 
 
-app.controller('MyWelcomeController', ['$scope', '$rootScope', '$location',
+app.controller('LandingPageController', ['$scope', '$rootScope', '$location',
 	function($scope, $rootScope, $location){
 		$scope.setUser = function(){
 			$rootScope.currentUserName = $scope.userName;
@@ -34,4 +34,4 @@ app.controller('MyListController', ['$scope', '$location', '$http', '$rootScope'
             });
 		};
 
-	}]);    
+	}]);
